@@ -64,7 +64,6 @@ There two ways to create Flutter application
 Ex.
 <pre>
 import 'package:flutter/material.dart';
-
 void main() {
 	runApp(
 		MaterialApp(
@@ -99,7 +98,6 @@ class HelloRectangle extends StatelessWidget {
 		);
 	}
 }
-
 </pre>
 <ul>
 	<li>

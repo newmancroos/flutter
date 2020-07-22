@@ -102,7 +102,18 @@ class HelloRectangle extends StatelessWidget {
 <ul>
 	<li>
 		When state changes by clicking a button Wedget automatically updates the UI
-		<img src="./Udacity/images/widget_lifecycle.png"
+		<img src="./Udacity/images/widget_lifecycle.png"/>
+	</li>
+	<li>
+		Flutter’s rendering engine written in Skia.
+		<img src="./Udacity/images/inside.png"/>
+	</li>
+	<li>
+		Fundamental unit of Flutter is Widgets,
+		<img src="./Udacity/images/widget.png"/>
+	</li>
+	<li>
+		<img src="./Udacity/images/controls.png"/>
 	</li>
 </ul>
 </p>

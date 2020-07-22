@@ -115,5 +115,54 @@ class HelloRectangle extends StatelessWidget {
 	<li>
 		<img src="./Udacity/images/controls.png"/>
 	</li>
+	<li>
+		There Two types of widgets
+		<ol>
+			<li>Stateful Widgets</li>
+			<li>Stateless Widgets</li>
+		</ol>
+	</li>
+	<li>
+		Stateless widgets, we can change the values/properties of widgets
+		<img src="./Udacity/images/statelesswidget.png"/>
+		<img src="./Udacity/images/container_declaration.png"/>
+	</li>
 </ul>
+	Sample Flutter application
+	<pre>
+		import 'package:flutter/material.dart';
+
+		void main() {
+		  runApp(
+			MaterialApp(
+			  debugShowCheckedModeBanner: false,
+			  home: Scaffold(
+				appBar: AppBar(
+				  title: Text("Hello Rectangle"),
+				),
+				body: HelloRectangle(),
+			  ),
+			),
+		  );
+		}
+
+		class HelloRectangle extends StatelessWidget {
+		  @override
+		  Widget build(BuildContext context) {
+			return Center(
+			  child: Container(
+				color: Colors.green,
+				height: 400.0,
+				width: 300.0,
+				child: Center(
+				  child: Text(
+					'Hello World',
+					style: TextStyle(fontSize: 40.0, color: Colors.blue),
+				  ),
+				),
+			  ),
+			);
+		  }
+		}
+	</pre>
 </p>

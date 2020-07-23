@@ -57,7 +57,8 @@ There two ways to create Flutter application
    • Flutter create <Application Name>
    If you encounter any License error while running application, run
    flutter doctor --android-licenses
-
+   • To run a flutter application from the application directory  --> <b>flutter run</b>
+   * To hard reload prss <b>lower case r</b>
 • The View of the Flutter application build as beautiful tree of widget
 
 </p>
@@ -165,4 +166,46 @@ class HelloRectangle extends StatelessWidget {
 		  }
 		}
 	</pre>
+	<p>
+		Let say we want to arrage some item in rows, like below,
+		<img src="./Udacity/images/Row_Items.png"/>
+		we need many element to construct the widget.
+		for example if take the first Item in the row, <b>Length</b>
+		<img src="./Udacity/images/design_element_widget.png"/>
+	</p>
+</p>
+<p>
+	If you set height and width of the containter or any other widget it will be ignore because the parent height and width passess to child object that means here MetirialApp which is full screen, passes to Containrer widget, so height and width will be ignore. Here we need to set wrap the containter into a Center widget wll works. Becase Center widget has relax from parent property inheritance.
+</p>
+<p>
+	What is Padding and Margin?
+	<img src="./Udacity/images/padding_and_margin.png" />
+	in flutter if you want margin/padding for all sides
+	<b>EdgeInserts.All(16.0)</b>.
+	if you want only some sides
+	<b>EdgeInserts.Only(left:16.0)</b>
+</p>
+<p>
+	How to use custom font in widget?
+	<img src="./Udacity/images/use_custom_font.png" />
+	<ol>
+		<li>Create fonts folder in the project folder</li>
+		<li>Goto fonts.google.com</li>
+		<li>Search for font and select the font and download it</li>
+		<li>open the zio file and cop only fonts files to the fonts folder of our project</li>
+		<li><b>pubspect.yaml</b> is the file that contains our project meta data and dependencies.</li>
+		<li>
+			Update fonts section of the yaml file to the downloaded fonts
+		</li>
+	</ol>
+</p>
+<p>
+	Flutter has <b>Row and Column</b> for arranging widget in Row column nature.<br>
+	In the row if you want to fit all columns of the row within the mobile screen we can use <b>Expanded</b> widget.
+</p>
+<p>
+	We can add images from multiple source and multiple format
+	<img src="./Udacity/images/Imaes_in_Flutter.png" /><br>
+	Greate source of simple images is <i>https://openclipart.org/</i>. It is free even for comercial use.<br>
+	Once we download image, we need to update <b>pubspect.yaml</b> file for images.
 </p>

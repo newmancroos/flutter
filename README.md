@@ -82,23 +82,24 @@ void main() {
 
 class HelloRectangle extends StatelessWidget {
 @override
-	Widget build(BuildContext context) {
-		return Center(
-			child: Container(
-				color: Colors.greenAccent,
-				height: 500.0,
-				width: 350.0,
-				child: Center(
-					child: Text(
-						'Hello!',
-						style: TextStyle(fontSize: 60.0),
-						textAlign: TextAlign.center,
-					),
-				),
-			),
-		);
-	}
+Widget build(BuildContext context) {
+return Center(
+child: Container(
+color: Colors.greenAccent,
+height: 500.0,
+width: 350.0,
+child: Center(
+child: Text(
+'Hello!',
+style: TextStyle(fontSize: 60.0),
+textAlign: TextAlign.center,
+),
+),
+),
+);
 }
+}
+
 </pre>
 <ul>
 	<li>
@@ -133,46 +134,47 @@ class HelloRectangle extends StatelessWidget {
 	<pre>
 		import 'package:flutter/material.dart';
 
-		void main() {
-		  runApp(
-			MaterialApp(
-			  debugShowCheckedModeBanner: false,
-			  home: Scaffold(
-				appBar: AppBar(
-				  title: Text("Hello Rectangle"),
-				),
-				body: HelloRectangle(),
-			  ),
-			),
-		  );
-		}
+    	void main() {
+    	  runApp(
+    		MaterialApp(
+    		  debugShowCheckedModeBanner: false,
+    		  home: Scaffold(
+    			appBar: AppBar(
+    			  title: Text("Hello Rectangle"),
+    			),
+    			body: HelloRectangle(),
+    		  ),
+    		),
+    	  );
+    	}
 
-		class HelloRectangle extends StatelessWidget {
-		  @override
-		  Widget build(BuildContext context) {
-			return Center(
-			  child: Container(
-				color: Colors.green,
-				height: 400.0,
-				width: 300.0,
-				child: Center(
-				  child: Text(
-					'Hello World',
-					style: TextStyle(fontSize: 40.0, color: Colors.blue),
-				  ),
-				),
-			  ),
-			);
-		  }
-		}
-	</pre>
-	<p>
-		Let say we want to arrage some item in rows, like below,
-		<img src="./Udacity/images/Row_Items.png"/>
-		we need many element to construct the widget.
-		for example if take the first Item in the row, <b>Length</b>
-		<img src="./Udacity/images/design_element_widget.png"/>
-	</p>
+    	class HelloRectangle extends StatelessWidget {
+    	  @override
+    	  Widget build(BuildContext context) {
+    		return Center(
+    		  child: Container(
+    			color: Colors.green,
+    			height: 400.0,
+    			width: 300.0,
+    			child: Center(
+    			  child: Text(
+    				'Hello World',
+    				style: TextStyle(fontSize: 40.0, color: Colors.blue),
+    			  ),
+    			),
+    		  ),
+    		);
+    	  }
+    	}
+    </pre>
+    <p>
+    	Let say we want to arrage some item in rows, like below,
+    	<img src="./Udacity/images/Row_Items.png"/>
+    	we need many element to construct the widget.
+    	for example if take the first Item in the row, <b>Length</b>
+    	<img src="./Udacity/images/design_element_widget.png"/>
+    </p>
+
 </p>
 <p>
 	If you set height and width of the containter or any other widget it will be ignore because the parent height and width passess to child object that means here MetirialApp which is full screen, passes to Containrer widget, so height and width will be ignore. Here we need to set wrap the containter into a Center widget wll works. Becase Center widget has relax from parent property inheritance.
@@ -209,3 +211,78 @@ class HelloRectangle extends StatelessWidget {
 	Greate source of simple images is <i>https://openclipart.org/</i>. It is free even for comercial use.<br>
 	Once we download image, we need to update <b>pubspect.yaml</b> file for images.
 </p>
+<p>
+	<h3>SqLite</h3><br>
+	SQLite is an in-process library that implements a self-contained, serverless, Zero-Configuration, Transactional SQL Database engin<br>
+	<ul>
+		<li>
+			Self-Contained - It need minimal support from external libraries
+		</li>
+		<li>
+			Serverless - It reads and wrties directly from/to database files on disk
+		</li>
+		<li>
+			Zero-Configuration - No need of any installtion or setup
+		</li>
+		<li>
+			Transactional - All changes in a transaction occure completely or not at all
+		</li>
+	</ul>
+	<p>
+		How to use SQLite in Flutter? Using SQLite plgin for flutter - SQFLite<br>
+		Include in pubspec.yaml
+	</p>
+	
+	<p>
+		<h4>Dependencies used</h4>
+		<ul>
+			<li>sqllite : any   - > The db plugin</li>
+			<li>path_provider : any  - > Find commonly used location on the filesystem (physical path for saving db is different in Antriod and Ios</li>
+			<li>intel: ^0.15.7 - > Internationalization package. includes date/number formating and parsing</li>
+		</ul>
+	</p>
+	<p>
+		We can use two types sql query in SQLite
+		<h3>1.Using Raw SQl</h3><br>
+		It is normal sql Insert, Update and Delete queries<br>
+		<ul>
+			<li>
+				db.rawQuery('SELECT * FROM yourTable');
+			</li>
+			<li>db.rawUpdate('UPDATE yourTable SET name=? where id=?',["newName","id"]);</li>
+			<li>db.rawDelete('DELETE FROM youTable WHERE id=1');</li>
+		</ul>
+		<h3>2.Using SqLite Helpers</h3>
+		
+		<ul>
+			<li>
+				db.update('youTable', yourObject.toMap(), where : "$colId=?", whereArgs:[yourObject.id]);
+			</li>
+		</ul>
+	</p>
+	<p>
+		in flutter Async function are avaiable using <b>Future, Async and Await</b>.
+		<p>
+			<h3>Future</h3>
+			<pre>
+				Future<List> getTodos(){
+					//Secondary thread
+				}
+				todosFuture = getodos().then((result){
+						//Main thread
+					});
+			</pre>
+			A Future represents a means for getting a value sometime in the future.
+			<br>
+			<h3>Async - Await</h3>
+			<pre>
+				void doSomething() async{
+					result = await getTodos();
+				}
+			</pre>
+			The async and await keywords allow you to write asynchrinous code that looks like synchronous code
+		</p>
+		
+	</p>
+</p>
+

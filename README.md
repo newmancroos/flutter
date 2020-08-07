@@ -133,7 +133,6 @@ textAlign: TextAlign.center,
 	Sample Flutter application
 	<pre>
 		import 'package:flutter/material.dart';
-
     	void main() {
     	  runApp(
     		MaterialApp(
@@ -147,7 +146,6 @@ textAlign: TextAlign.center,
     		),
     	  );
     	}
-
     	class HelloRectangle extends StatelessWidget {
     	  @override
     	  Widget build(BuildContext context) {
@@ -174,7 +172,6 @@ textAlign: TextAlign.center,
     	for example if take the first Item in the row, <b>Length</b>
     	<img src="./Udacity/images/design_element_widget.png"/>
     </p>
-
 </p>
 <p>
 	If you set height and width of the containter or any other widget it will be ignore because the parent height and width passess to child object that means here MetirialApp which is full screen, passes to Containrer widget, so height and width will be ignore. Here we need to set wrap the containter into a Center widget wll works. Becase Center widget has relax from parent property inheritance.
@@ -232,7 +229,6 @@ textAlign: TextAlign.center,
 		How to use SQLite in Flutter? Using SQLite plgin for flutter - SQFLite<br>
 		Include in pubspec.yaml
 	</p>
-	
 	<p>
 		<h4>Dependencies used</h4>
 		<ul>
@@ -253,7 +249,6 @@ textAlign: TextAlign.center,
 			<li>db.rawDelete('DELETE FROM youTable WHERE id=1');</li>
 		</ul>
 		<h3>2.Using SqLite Helpers</h3>
-		
 		<ul>
 			<li>
 				db.update('youTable', yourObject.toMap(), where : "$colId=?", whereArgs:[yourObject.id]);

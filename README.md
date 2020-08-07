@@ -282,7 +282,16 @@ textAlign: TextAlign.center,
 			</pre>
 			The async and await keywords allow you to write asynchrinous code that looks like synchronous code
 		</p>
-		
+		<p>
+			<h3>Navigation in Flutter</h3><br>
+			Navigation is showing pages in the screen, Navigation has a <b>Stack</b> that hold all the pages. it has two method
+			<ul>
+				<li>push()</li>
+				<li>pop()</li>
+			</ul>
+			- push() put a new page on top of the stack
+			- pop() removes the page from the screen so the previous page will be visible on the screen.
+		</p>
 	</p>
 </p>
 

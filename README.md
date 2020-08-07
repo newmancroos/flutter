@@ -293,5 +293,14 @@ textAlign: TextAlign.center,
 			- pop() removes the page from the screen so the previous page will be visible on the screen.
 		</p>
 	</p>
+	<p>
+		<h3>Gusture and Animations</h3> <br>
+			<h4>Flutter layouts</h4><br>
+			<img src="./Udacity/images/Flutter_layouts.png" />
+			<ul>
+				<li><b>Stack: A widget that positions its children relative to the edge of its box</b></li>
+				<li><b>Stack: A widget that positions its children relative to the edge of its box</b></li>
+			</ul>
+	</p>
 </p>
 

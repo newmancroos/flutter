@@ -293,9 +293,11 @@ textAlign: TextAlign.center,
 			<h4>Flutter layouts</h4><br>
 			<img src="./Udacity/images/Flutter_layouts.png" />
 			<ul>
-				<li><b>Stack: A widget that positions its children relative to the edge of its box</b></li>
-				<li><b>Stack: A widget that positions its children relative to the edge of its box</b></li>
+				<li><b>Stack: A widget that positions its children relative to the edge of its box.</b></li>
+				<li><b>Positioned: A widget that controls where a child of a stack is positioned.</b></li>
 			</ul>
+			<br>
+			
 	</p>
 </p>
 
